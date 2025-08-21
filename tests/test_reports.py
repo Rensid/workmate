@@ -1,7 +1,7 @@
 from main import main
 import sys
 import pytest
-from parser import load_logs 
+from parser import load_logs
 from reports.average import AverageReport
 
 
@@ -34,9 +34,7 @@ def test_main_with_args(monkeypatch, tmp_path):
     )
 
     monkeypatch.setattr(
-        sys,
-        "argv",
-        ["main.py", "--file", str(log_file), "--report", "average"]
+        sys, "argv", ["main.py", "--file", str(log_file), "--report", "average"]
     )
 
     outputs = []

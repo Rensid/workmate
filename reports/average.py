@@ -2,10 +2,10 @@ from collections import defaultdict
 from .base import Report
 from pprint import pprint
 
+
 class AverageReport(Report):
     def generate(self):
         stats = defaultdict(lambda: {"count": 0, "total_time": 0})
-        # pprint(self.logs)
         for log in self.logs:
             endpoint = log.get("url")
             response_time = log.get("response_time", 0)

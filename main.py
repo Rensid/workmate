@@ -13,7 +13,12 @@ REPORTS = {
 def parse_args():
     parser = argparse.ArgumentParser(description="Анализ файла с логами")
     parser.add_argument("--file", nargs="+", required=True, help="Путь к файлу")
-    parser.add_argument("--report", required=True, choices=REPORTS.keys(), help=f"Вариант отчета. Из доступных {REPORTS}")
+    parser.add_argument(
+        "--report",
+        required=True,
+        choices=REPORTS.keys(),
+        help=f"Вариант отчета. Из доступных {REPORTS}",
+    )
     parser.add_argument("--date", help="Фильтр по дате")
     return parser.parse_args()
 
