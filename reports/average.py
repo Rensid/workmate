@@ -1,9 +1,8 @@
 from collections import defaultdict
-from .base import Report
-from pprint import pprint
+from .base import BaseReport
 
 
-class AverageReport(Report):
+class AverageReport(BaseReport):
     def generate(self):
         stats = defaultdict(lambda: {"count": 0, "total_time": 0})
         for log in self.logs:

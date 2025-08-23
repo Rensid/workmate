@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Report(ABC):
+class BaseReport(ABC):
     def __init__(self, logs):
         self.logs = logs
 

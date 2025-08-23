@@ -1,5 +1,4 @@
 import argparse
-import sys
 from reports.average import AverageReport
 from parser import load_logs
 from tabulate import tabulate
